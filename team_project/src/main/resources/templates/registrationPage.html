@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    <div class="php">
+        <?php require 'registrationPage.php';?>
+    </div>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,7 +37,7 @@
         <br>
         <br>
         <p1>Address:</p1>
-        <input type="text" name="fname" class="" id="name" placeholder="Enter your address">
+        <input type="text" name="Address" class="" id="Address" placeholder="Enter your address">
         <br>
         <br>
         <p1>Telephone number:</p1>
@@ -65,3 +67,5 @@
     firstPassword.onchange = validatePassword;
     confirmPassword.onkeyup = validatePassword;
 </script>
+
+

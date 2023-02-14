@@ -4,8 +4,8 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-CREATE DATABASE IF NOT EXISTS `u_210055728_stepcorrect` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `u_210055728_stepcorrect`;
+CREATE DATABASE IF NOT EXISTS `u_210055728_sc` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `u_210055728_sc`;
 
 
 CREATE TABLE `user` (
@@ -28,8 +28,8 @@ CREATE TABLE `products` (
   `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `description` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `quantity` int(5) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `price` int(10) COLLATE utf8mb4_unicode_ci NOT NULL
-  `image` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `price` int(10) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(500) COLLATE utf8mb4_unicode_ci NOT NULL
   
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE utf8mb4_general_ci; 
 --block 1 end--
