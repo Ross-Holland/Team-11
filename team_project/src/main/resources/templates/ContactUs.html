@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Us - Step correct</title>
+    <link rel="stylesheet" href="ContactUs.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Connect with us</h1>
+        <p>We would love to hear about any quesries you may be having.
+           <br>Feel free to get in touch.</p>
+    
+    <div class="Contact-box">
+        <div class="contact-left">
+            <h3>Send your request</h3>
+            <form onsubmit="sendEmail(); reset(); return false;">
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Name:</label>
+                        <input type="text" placeholder="John Smith">
+                    </div>
+                    <div class="input-group">
+                        <label>Phone:</label>
+                        <input type="text" placeholder="+44 1234 567890">
+                    </div>    
+
+                </div>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label>Email:</label>
+                        <input type="email" placeholder="JohnSmith@gmail.com">
+                    </div>
+                    <div class="input-group">
+                        <label>Subject:</label>
+                        <input type="text" placeholder="product problems">
+                    </div>    
+                </div>
+
+                <label>Message</label>
+                <textarea rows="5" placeholder="what would you like to know?"></textarea>
+
+                <button type="submit">SEND</button>
+
+            </form>
+        </div>
+
+        <div class="contact-right">
+            <h3>Reach Us</h3>
+
+            <table>
+                <tr>
+                    <td>Email:</td>
+                    <td>stepcorrect@example.com</td>
+                </tr>
+                <tr>
+                    <td>Phone number:</td>
+                    <td>0121 384 2864</td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td>Aston University, 2nd floor <br>
+                        room 204, Team 11</td>
+                </tr> 
+
+            </table>
+
+
+        </div>
+
+
+    </div>   
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail(){
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "zedy686@gmail.com",
+                Password : "zuhaib123",
+                To : 'zuhaib.hussain2001@gmail.com',
+                From : document.getElementById("Email").value,
+                Subject : "product problems",
+                Body : "Name: " + document.getElementById("Name").value
+                    + "<br> Email: " + document.getElementById("Email").value
+                    + "<br> Phone number: " + document.getElementById("Phone").value
+                    + "<br> Message: " + document.getElementById("Message").value
+            }).then(
+            message => alert(Message, Sent, Successfully)
+            );
+        }
+    </script>
+</body>
+</html>
